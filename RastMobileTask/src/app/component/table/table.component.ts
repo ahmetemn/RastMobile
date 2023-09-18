@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RastMobileService } from '../services/rast-mobile.service';
+import { RastMobileService } from '../../services/rast-mobile.service';
 import { todoItem } from '../models/todoItem';
 declare var $: any; // jQuery'yi kullanabilmek için deklarasyon ekleyin
 

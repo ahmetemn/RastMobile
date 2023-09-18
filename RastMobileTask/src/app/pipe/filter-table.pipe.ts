@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { todoItem } from '../models/todoItem';
+import { todoItem } from '../component/models/todoItem';
 
 @Pipe({
   name: 'filterTable'
