@@ -39,16 +39,17 @@
     </table>
   </div>
     <div class="tableFooter row">
-      <div class="col-sm-6">
+      <div class="col-sm-6 col-lg-6">
         <div class="px-5 d-flex">
           <div class="mt-2">
             <span>Show:</span>
           </div>
           <div class="px-3 mb-4">
             <div class="rowsPieces d-flex ">
-              <span class="fw-bold p-2 mt-1">
-                {{rowsPieces}} rows
+              <span class="fw-bold  p-1 mt-1">
+                {{rowsPieces}}
               </span>
+              <span class="fw-bold mt-2 ">rows</span>
               <div class="px-3  upDownIcons ">
                 <i class="bi bi-arrow-up-circle" (click)="decreaseItemPerPage()"></i>
                 <i class="bi bi-arrow-down-circle" (click)="increaseItemPerPage()"></i>
@@ -57,7 +58,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6 col-lg-6">
         <div class="float-end">
           <pagination-controls (click)="updateRowPieces()" (pageChange)="p = $event" previousLabel="" nextLabel=""></pagination-controls>
         </div>
