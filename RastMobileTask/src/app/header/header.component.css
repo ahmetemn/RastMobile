@@ -1,0 +1,26 @@
+.header {
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+
+}
+
+.logoImg{
+  width: 50%;
+}
+
+.mobile{
+  display: none;
+}
+@media screen and (max-width: 600px) {
+
+  .col-2{
+    display: none;
+  }
+
+  .mobile{
+    display: flex;
+  }
+}

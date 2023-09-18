@@ -1,0 +1,99 @@
+<div class="container content">
+  <div class="container p-5">
+    <div class="row">
+      <div class="col-sm-6  ">
+        <div class="d-flex">
+          <div class="input-group mb-3">
+            <input [(ngModel)]="binding" type="text" class="form-control" placeholder="Search..."
+              aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2"><i class="searchIcon bi bi-search"></i></span>
+            </div>
+          </div>
+          <div class="px-2">
+            <span class="input-group-filter p-2 " id="basic-addon2"><i class="filterIcon bi bi-funnel-fill "></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="addNewAccount p-2 mb-2" data-toggle="modal" data-target="#exampleModal">
+          <span><i class="bi bi-plus fw-bold"></i> Yeni Hesap Ekle</span>
+        </div>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Sosyal Medya Linki </th>
+          <th>Sosyal Medya Adı</th>
+          <th>Açıklama</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let todo of todos  | paginate: { itemsPerPage: itemPerPage, currentPage: p } | filterTable:binding">
+          <td>{{todo.socialMediaLink}}</td>
+          <td> {{todo.socialMediaName}}</td>
+          <td> {{todo.description}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    <div class="tableFooter row">
+      <div class="col-sm-6">
+        <div class="px-5 d-flex">
+          <div class="mt-2">
+            <span>Show:</span>
+          </div>
+          <div class="px-3 mb-4">
+            <div class="rowsPieces d-flex ">
+              <span class="fw-bold p-2 mt-1">
+                {{rowsPieces}} rows
+              </span>
+              <div class="px-3  upDownIcons ">
+                <i class="bi bi-arrow-up-circle" (click)="decreaseItemPerPage()"></i>
+                <i class="bi bi-arrow-down-circle" (click)="increaseItemPerPage()"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="float-end">
+          <pagination-controls (click)="updateRowPieces()" (pageChange)="p = $event" previousLabel="" nextLabel=""></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Yeni bir kullanıcı eklemek istediğimizde kullanacağımız modal  -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Yeni Hesap Ekle</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label class="px-2" for="exampleInputEmail1">Sosyal Medya Linki</label>
+            <input  #socialMediaLink type="email" class="custom-input form-control " id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Sosyal Medya Linki Giriniz...">
+            <label  class="px-2" for="exampleInputEmail1">Sosyal Medya Adı</label>
+            <input #socialMediaName type="email" class="custom-input form-control " id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Sosyal Medya Adı Giriniz...">
+            <label class="px-2" for="exampleInputEmail1">Açıklama</label>
+            <input #description type="email" class="custom-input form-control " id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Açıklama Giriniz...">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btnVazgec" data-dismiss="modal">Vazgeç</button>
+        <button type="button" class="btnKaydet" (click)="addItem(socialMediaLink.value , socialMediaName.value, description.value); socialMediaLink.value='';  socialMediaName.value ='' ;description.value='' "  >Kaydet</button>
+      </div>
+    </div>
+  </div>
+</div>

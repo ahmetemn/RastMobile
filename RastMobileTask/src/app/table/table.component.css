@@ -1,0 +1,123 @@
+.content{
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+.tableTopBar{
+  display: flex;
+  justify-content: space-between;
+}
+table{
+ width: 100%;
+
+}
+.addNewAccount{
+  background-color: #744BFC;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+
+  float: right;
+  text-align: center;
+}
+.searchIcon{
+  color: white;
+}
+.input-group-filter{
+  background-color: white;
+  border-radius: 50%;
+
+}
+.filterIcon{
+  color: #744BFC;
+  font-size: 23px;
+
+}
+.input-group{
+  width: 100%;
+}
+.input-group-text{
+
+  border-radius: 0px 20px 20px 0px;
+  border-left: none;
+  background-color: #744bfc;
+}
+.form-control{
+  border-right: none;
+  border-radius:20px 0px 0px  20px;
+}
+table, th, td {
+  border-right:3px solid aliceblue ;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+
+  background-color: white;
+  border-bottom: 1px solid aliceblue;
+  padding: 8px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: aliceblue;
+}
+.tablePagination{
+
+  display: flex;
+  justify-content: end;
+
+}
+.tableFooter{
+  display: flex;
+  justify-content: space-between;
+}
+.rowsPieces{
+  background-color: white;
+  border-radius: 20px;
+ height: 100%;
+
+
+}
+.upDownIcons{
+  cursor: pointer;
+   display: flex;
+   flex-direction: column;
+
+}
+.custom-input{
+  border-radius: 20px;
+}
+.btnKaydet{
+  background-color:#744bfc;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 7px;
+}
+.btnVazgec{
+  background-color: whitesmoke;
+  color:#744BFC;
+  border: none;
+  border-radius: 20px;
+  padding: 7px;
+}
+
+.topbarDiv{
+  justify-content: space-between;
+}
+
+
+@media screen and (max-width: 600px) {
+
+.addNewAccount{
+  width: 100%;
+}
+.float-end{
+  width: 100%;
+}
+}
