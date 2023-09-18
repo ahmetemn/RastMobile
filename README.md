@@ -1,6 +1,6 @@
 
 
-Öncelik olarak npm install diyerek gerekli kütüphanelerin çalışmasını sağlayın . 
+Öncelik olarak npm install diyerek gerekli kütüphanelerin indirilmesini sağlayın . 
 
 eklemiş olduğum paketler ->  npm i ngx-pagination
                           ->  npm install jquery  
