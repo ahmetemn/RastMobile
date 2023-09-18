@@ -33,5 +33,7 @@
   .mobile{
     display: flex;
   }
-
+  .hamburgerMenu{
+      font-size: 30px;
+  }
 }
